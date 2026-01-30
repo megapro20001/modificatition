@@ -1,0 +1,159 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 600px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.progress-container {
+    flex-grow: 1;
+    height: 16px;
+    background: #e5e5e5;
+    border-radius: 10px;
+}
+
+.progress-bar {
+    width: 30%;
+    height: 100%;
+    background: #58cc02;
+    border-radius: 10px;
+    transition: width 0.3s;
+}
+
+.instruction {
+    padding: 0 20px;
+    font-size: 24px;
+    color: #3c3c3c;
+}
+
+.phrase-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.bubble {
+    border: 2px solid #e5e5e5;
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+    font-size: 18px;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.word-card {
+    padding: 12px 20px;
+    border: 2px solid #e5e5e5;
+    border-bottom: 4px solid #e5e5e5;
+    border-radius: 12px;
+    cursor: pointer;
+    background: white;
+    font-weight: bold;
+}
+
+.word-card:active {
+    border-bottom: 2px solid #e5e5e5;
+    transform: translateY(2px);
+}
+
+.word-card.selected {
+    background: #ddf4ff;
+    color: #1899d6;
+    border-color: #1899d6;
+}
+
+footer {
+    margin-top: auto;
+    padding: 20px;
+    border-top: 2px solid #e5e5e5;
+    text-align: right;
+}
+
+.check-btn {
+    background: #58cc02;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #46a302;
+}
+
+/* К предыдущим стилям добавь или замени эти: */
+.answer-slots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    min-height: 50px;
+    margin: 20px;
+    border-bottom: 2px solid #e5e5e5;
+    justify-content: center;
+}
+
+.word-card.hidden {
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+footer.correct { background-color: #d7ffb8; border-top-color: #a5d6a7; }
+footer.wrong { background-color: #ffdfe0; border-top-color: #ff9393; }
+
+#status-message {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.correct #status-message { color: #58a700; display: block; }
+.wrong #status-message { color: #ea2b2b; display: block; }
+
+.word-card.hidden {
+    visibility: hidden; /* Кнопка исчезает, но место сохраняется, чтобы остальные не прыгали */
+    pointer-events: none;
+}
+
+.answer-slots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    min-height: 60px; /* Фиксированная высота, чтобы сова не прыгала */
+    margin: 20px auto;
+    padding: 10px;
+    width: 80%;
+    border-bottom: 2px solid #e5e5e5;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Картинка совы */
+.character img {
+    width: 120px;
+    height: auto;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duo Clone Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="progress-container">
+                <div class="progress-bar" id="progress" style="width: 0%"></div>
+            </div>
+        </header>
+
+        <main id="game-card">
+            <h1 id="instruction">Переведите это предложение</h1>
+            
+            <div class="quiz-container">
+                <div class="character">
+                    <svg width="120" height="120" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="45" fill="#58cc02"/>
+                        <circle cx="35" cy="40" r="10" fill="white"/>
+                        <circle cx="65" cy="40" r="10" fill="white"/>
+                        <circle cx="35" cy="40" r="4" fill="black"/>
+                        <circle cx="65" cy="40" r="4" fill="black"/>
+                        <path d="M45 55 L55 55 L50 65 Z" fill="#ffc800"/>
+                    </svg>
+                </div>
+                <div class="bubble" id="target-text">Loading...</div>
+            </div>
+
+            <div class="answer-slots" id="answer-slots">
+                </div>
+
+            <div class="options" id="options-grid"></div>
+        </main>
+
+        <footer id="footer">
+            <div id="status-message"></div>
+            <button class="check-btn" id="action-btn">Проверить</button>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+
+    <div class="character">
+    <img src="https://design.duolingo.com/28e4b3a449297aa5694c.svg" alt="Duo">
+</div>
+</body>
+</html> 
